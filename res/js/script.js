@@ -55,5 +55,10 @@ $(function() {
     $(".blue-button").click(function() {
       $("#add-course").toggle();
     });
+
+    $("#cancel-course").click(function() {
+      $(".input").val("");
+      $("#add-course").hide();
+    });
   }
 });

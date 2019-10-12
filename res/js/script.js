@@ -15,28 +15,28 @@ $(function() {
   ];
 
   init();
-
+  
   function init() {
+
     $("#name").text(user.firstname + " " + user.lastname);
     $("#birthdate").text(user.birthdate);
     $("#faculty").text(user.faculty);
     $("#gpa strong").text(user.gpa);
 
-    // for (let i = 0; i < courses.length; i++) {
-    //   let column = $("#courses th");
+    $("tbody").empty();
 
-    //   for (let j = 0; j < column.length; j++) {
-    //     if (j === 0) {
-    //       $("td").text(i);
-    //     } else if (j === 1) {
-    //       $("td").text(courses[i].title);
-    //     } else if (j === 2) {
-    //       $("td").text(courses[i].semester);
-    //     } else {
-    //       $("td").text(courses[i].grade);
-    //     }
-    //   }
-    // }
+    for(let i = 0; i < courses.length; i++){
+
+      let column = $("<tr></tr>");
+    
+      const index = $("<td></td>").text(i + 1);
+      const td = $("<td></td>").text(courses[i].title);
+      const td2 = $("<td></td>").text(courses[i].semester);
+      const td3= $("<td></td>").text(courses[i].grade);
+    
+      column.append(index, td, td2, td3);
+      $("tbody").append(column);  
+    }
 
     $("#profile-button").click(function() {
       $("#courses-container").removeClass("active");

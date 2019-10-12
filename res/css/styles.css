@@ -153,11 +153,17 @@ table td {
   border: none;
   padding: 10px 10px;
 }
+.green-button:hover {
+  cursor: pointer;
+}
 .grey-button {
   background-color: #e1e8e6;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
+}
+.grey-button:hover {
+  cursor: pointer;
 }
 .input {
   border: 1px solid #cccccc;
